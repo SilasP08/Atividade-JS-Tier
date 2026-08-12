@@ -1,3 +1,24 @@
-h1 {
-    color: brown;
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    max-width: 1700px;
+    margin: auto 0;
+    justify-content: center;
+    margin-top: 130px;
+    align-items: center;
+    color: aliceblue;
+}
+
+.conteudo {
+    width: 650px;
+    margin-bottom: 100px;
+}
+
+.conteudo h1 {
+    font-size: 100px;
+    margin-bottom: 100px;
+}
+
+.conteudo img {
+    width: 350px;
 }
