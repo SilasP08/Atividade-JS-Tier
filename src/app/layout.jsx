@@ -41,6 +41,7 @@ export default function RootLayout({ children }) {
                 CAREERS
               </li>
               <li><Link href={"/login"} ><button className="btn-header">Login</button></Link></li>
+              <li><Link href={"/cadastro"} ><button className="btn-header">Cadastrar-se</button></Link></li>
             </ul>
 
           </div>

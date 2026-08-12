@@ -1,16 +1,31 @@
+import "./login.css"
+
 export default function Login() {
-    return(
+    return (
         <>
-        <main>
+            <div className="conteiner">
+                <div className="card-login">
+                    <div className="titulo-form">
+                        <h1>Logar</h1>
+                        <p>Preencha as informações abaixo.</p>
+                    </div>
+                    <div className="inputs">
+                        <label>Email</label>
+                        <input type="text" placeholder="Email" />
+                    </div>
 
-        
-            <div className="card-login">
-                <h2>Preencha suas Informações</h2>
+                    <div className="inputs">
+                        <label>Senha</label>
+                        <input type="text" placeholder="Senha" />
+                    </div>
 
-                <input type="text" placeholder="Email" />
-                <input type="text" placeholder="Senha" />
+                    <div className="buttons">
+                        <button className="logar">
+                            Logar
+                        </button>
+                    </div>
+                </div>
             </div>
-            </main>
         </>
     )
 }
