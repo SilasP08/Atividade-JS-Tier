@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
               <span>Facebook Premier Levarl Partner Agency</span>
             </div>
             <div className="btn-central">
-              <button className="btn-central">Login</button>
+              <Link href={"/login"}><button className="btn-central">Login</button> </Link>
             </div>
           </div>
 
