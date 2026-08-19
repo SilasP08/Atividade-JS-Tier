@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
+import BannerCTA from "@/components/bannerCTA";
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -52,6 +53,9 @@ export default async function Home() {
           <p>Years of Facebook</p>
         </div>
       </div>
+
+
+      <BannerCTA/>
     </>
 
   );

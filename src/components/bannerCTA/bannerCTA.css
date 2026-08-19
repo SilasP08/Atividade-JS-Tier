@@ -10,8 +10,13 @@
     padding: 20px;
 }
 
+.conteiner-cta-fluid p {
+    max-width: 50vw;
+}
+
 .button-cta {
     font-size: xx-large;
     font-weight: bold;
     padding: 2rem;
+    border-radius: 25px;
 }
