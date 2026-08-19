@@ -9,7 +9,7 @@ export default async function Home() {
 
   await sleep(3500);
 
-  throw new Error("Simulando um erro catastrofico!!!");
+  // throw new Error("Simulando um erro catastrofico!!!");
 
   return (
     <>

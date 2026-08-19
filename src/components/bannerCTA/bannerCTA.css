@@ -1,0 +1,17 @@
+.conteiner-cta-fluid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+    background-color: brown;
+    color: bisque;
+    padding: 20px;
+}
+
+.button-cta {
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 2rem;
+}
