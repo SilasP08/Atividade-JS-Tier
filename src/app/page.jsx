@@ -2,8 +2,15 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export default function Home() {
+
+export default async function Home() {
+
+  await sleep(3500);
+
+  throw new Error("Simulando um erro catastrofico!!!");
+
   return (
     <>
       <div className="conteiner">
