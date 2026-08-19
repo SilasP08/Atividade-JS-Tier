@@ -1,28 +1,165 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const Card = () => {
   return (
-    <div className="flex flex-col gap-2 w-60 sm:w-72 text-[10px] sm:text-xs z-50">
-      <div className="error-alert cursor-default flex items-center justify-between w-full h-12 sm:h-14 rounded-lg bg-[#232531] px-[10px]">
-        <div className="flex gap-2">
-          <div className="text-[#d65563] bg-white/5 backdrop-blur-xl p-1 rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
-            </svg>
+    <StyledWrapper>
+      <div className="card">
+        <div className="header">
+          <div className="btn" />
+          <div className="btn" />
+          <div className="btn" />
+          <div className="active">JS console...</div>
+        </div>
+        <div className="content">
+          <div className="req">
+            console.log(a<span>*</span>b);
           </div>
-          <div>
-            <p className="text-white">Please try again</p>
-            <p className="text-gray-500">This is the description part</p>
+          <div className="res error">
+            <span>ReferenceError</span>{'{'}" <span>a is not defined </span>"{'}'}
+          </div>
+          <div className="req">
+            console.log(2<span>*</span>3);
+          </div>
+          <div className="res">
+            6
           </div>
         </div>
-        <button className="text-gray-600 hover:bg-white/10 p-1 rounded-md transition-colors ease-linear">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-          </svg>
-        </button>
       </div>
-    </div>
+    </StyledWrapper>
   );
 }
+
+const StyledWrapper = styled.div`
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 290px;
+    height: 254px;
+    background: #2b2b2b;
+    margin: 0 2px;
+  }
+
+  .card .header {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(17, 17, 17);
+    padding-left: 4px;
+  }
+
+  .card .header .btn {
+    margin-left: 8px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .active {
+    cursor: pointer;
+    position: relative;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fefe;
+    background-color: #2b2b2b;
+    height: 100%;
+    margin-left: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 12px;
+  }
+
+  .card .header div:nth-child(1) {
+    background-color: rgb(255, 102, 0);
+  }
+
+  .card .header div:nth-child(2) {
+    background-color: rgb(247, 202, 1);
+  }
+
+  .card .header div:nth-child(3) {
+    background-color: rgb(10, 184, 10);
+  }
+
+  .card .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    line-height: 125%;
+    color: #fff;
+  }
+
+  .card .content .req, .card .content .res {
+    padding: .2em 1.6em;
+    border-bottom: 1px solid rgba(102, 101, 101, 0.685);
+    font-size: 12px;
+  }
+
+  .card .content .req {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    color: #fff;
+  }
+
+  .card .content .req::before {
+    position: absolute;
+    content: "";
+    border-left: 1px solid rgb(177, 176, 176);
+    border-bottom: 1px solid rgb(177, 176, 176);
+    padding: 4px;
+    left: 2px;
+    height: 0;
+    width: 0;
+    background-color: transparent;
+    transform: rotate(220deg);
+  }
+
+  .card .content .res {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    color: #fff;
+  }
+
+  .card .content .res span:nth-child(1) {
+    color: rgb(230, 103, 103);
+    font-style: italic;
+    margin-right: 8px;
+  }
+
+  .card .content .res span:nth-child(2) {
+    color: rgb(77, 245, 43);
+  }
+
+  .card .content .res.error {
+    background-color: rgba(255, 0, 0, 0.05);
+  }
+
+  .card .content .res.error::before {
+    position: absolute;
+    content: "X";
+    padding: 3px;
+    left: 2px;
+    height: 6px;
+    width: 6px;
+    background-color: rgba(255, 0, 0, 0.644);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+  }`;
 
 export default Card;
