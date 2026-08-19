@@ -1,0 +1,51 @@
+header {
+  background: linear-gradient(60deg, rgb(53, 122, 252), rgb(0, 0, 122));
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+
+}
+
+.topo-esquerdo img {
+  padding: 10px 10px 10px 15px;
+  width: 120px;
+}
+
+.topo-direito ul {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+  list-style: none;
+}
+
+.topo-direito li {
+  text-decoration: none;
+  color: aliceblue;
+  text-align: center;
+  padding: 5px 45px;
+}
+
+.topo-direito Link  {
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.btn-header {
+  background-color: rgb(250, 116, 172);
+  border: none;
+  padding: 10px 15px 10px 15px;
+  border-radius: 20px;
+  color: aliceblue;
+  width: 100px;
+}
+
+.btn-header:hover {
+  transition: 0.2ms ease;
+  background-color: rgb(255, 79, 196);
+  transform: scale(1.05);
+}

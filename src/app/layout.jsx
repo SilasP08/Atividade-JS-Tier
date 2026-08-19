@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,57 +23,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
-        <header>
-          <div className="topo-esquerdo">
-            <img src="/image/logo.png" alt="" />
-          </div>
-          <div className="topo-direito">
-            <ul>
-              <li>
-                <Link className="link" href={"/"}>Inicio</Link>
-              </li>
-              
-              <li>
-               <Link className="link" href={"/sobre"}>Sobre Nós</Link>
-              </li>
-              <li>
-                PODCAST
-              </li>
-              <li>
-                CAREERS
-              </li>
-              <li><Link href={"/login"} ><button className="btn-header">Login</button></Link></li>
-              <li><Link href={"/cadastro"} ><button className="btn-header">Cadastrar-se</button></Link></li>
-            </ul>
+        <Header/>
 
-          </div>
-
-        </header>
         {children}
-        <footer className="footer">
-          <div className="footer-container">
-
-            <div className="footer-logo">
-                <h2>Tier</h2>
-                <img src="/image/logo.png" alt="" />
-            </div>
-
-
-            <div className="footer-contato">
-              <h3>Contato</h3>
-              <p>Telefone: (11) 93056-9806</p>
-            </div>
-
-
-            <div className="footer-endereco">
-              <h3>Endereço</h3>
-              <p>Rua das Indústrias, 245</p>
-              <p>Centro Empresarial</p>
-              <p>São Paulo - SP, 09000-000</p>
-            </div>
-
-          </div>
-        </footer>
+        
+        <Footer/>
       </body>
     </html>
   );
